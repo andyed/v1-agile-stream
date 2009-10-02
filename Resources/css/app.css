@@ -1,0 +1,151 @@
+body {
+	zoom: 100%;
+	font-family: Helvetica, Arial, sans-serif; 
+}
+body, content {
+	padding:9px;
+	margin:0;
+	border:0;
+	background-color:#fff;
+
+}
+
+div.null {
+	margin:0;
+	padding:0;
+	clear:all;
+}
+
+
+
+h2 {
+	padding:2px 5px 0px 2px;
+	border-top:solid 1px #84847B;
+	margin-bottom:10px;
+	margin-top:0px;
+	min-height:19px;
+	clear:left;
+
+}
+h2.title {
+	/*float:clear;*/
+}
+a {
+	text-decoration:none;
+	color:#424242;
+}
+
+h2.title a {
+	color:##424242 !important;
+}
+#config, #mycontent a, #content a {
+	text-decoration:none !important;
+	color:#424242 !important;
+}
+
+#wrapper {
+	border:1px solid #272750;	
+	margin:0px;
+
+
+}
+#mycontent, #content {
+	padding:4px;
+	font-size:1.1em;
+	background-color:#fff;
+}
+
+
+
+.title {
+	font-size:1.1em;
+	float:clear;
+}
+
+.asset-icon {
+	margin-left:2px;
+	margin-right:4px;
+	border:none;
+	float:left;
+}
+
+.toolbar-mini-button {
+	float:right;
+	margin-left:6px;
+	margin-top: -3px;
+}
+
+.byline {
+	font-size:.9em;
+	width:240px;
+	padding:8px;
+	background-color:#A8A49C;color:white;float:right;font-weight:bold;
+	margin-top:1px;
+	border-right:solid 1px #84847B;
+	margin-left:8px;
+
+}
+.itemDetail {
+	font-size:.9em;
+	padding-left:2.6em;
+	max-height:200px;
+	overflow:hidden;
+	clear:left;
+	padding-bottom:8px;
+}
+
+#header {
+	color:#ffffff;
+	position:absolute;left:300px;top:1.0em;font-size:1.35em;z-index:999;height:2em;width:auto;
+	/* overflow:hidden;*/
+	width:200px;
+	
+}
+
+#reload {
+ margin-right:.5em;
+
+ /*float:right;*/
+}
+
+#loading {	
+ display:none;
+ }
+
+#updated {
+	margin-top:-17px;
+	/*float:right;*/
+	font-variant:small-caps;
+	font-size:.76em;
+	font-weight:bold;
+	white-space:nowrap;
+	color:#D9AEB5;
+}
+
+.news-item {
+	max-height:240;
+	margin-top:14px;
+	padding-top:14px;
+	clear: both;
+}
+
+.rider {
+	margin-bottom:8px;
+	clear:both;
+}
+
+#projectName {
+	vertical-align:middle;
+}
+
+div.ui-widget-content {
+	border-width:0px !important;
+}
+
+.ui-tabs-panel {
+	padding: 1.5em 0.6em !important;
+}
+
+.ui-tabs .ui-tabs-nav {
+padding: 0.8em 0.8em 0px !important;
+}

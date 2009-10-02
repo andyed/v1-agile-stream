@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>VersionOne River of Changes</title>
+
+
+<link rel="stylesheet" type="text/css" href="css/theme/jquery-ui-1.7.2.custom.css" />
+<link rel="stylesheet" type="text/css" href="css/superfish.css"/>
+<link rel="stylesheet" type="text/css" href="css/app.css" />
+
+<script src="js/lib/jquery-1.3.2.min.js" language="javascript" type="application/x-javascript"></script>
+<script src="js/lib/jquery-ui-1.7.2.custom.min.js" language="javascript" type="application/x-javascript"></script>
+<script src="js/lib/base64.js" language="javascript" type="application/x-javascript"></script>
+<script src="js/lib/jquery.timeago.js" language="javascript" type="application/x-javascript"></script>
+<script src="js/lib/json2.js" language="javascript" type="application/x-javascript"></script>
+<script src="js/lib/jquery.json-1.3.min.js" language="javascript" type="application/x-javascript"></script>
+<script src="js/lib/taffy.js" language="javascript" type="application/x-javascript"></script>
+<script src="js/lib/superfish.js" language="javascript" type="application/x-javascript"></script>
+<script src="js/lib/MagicPrefs.js" language="javascript" type="application/x-javascript"></script>
+<script src="js/date.js" language="javascript" type="application/x-javascript"></script>
+
+<script src="js/v1river.js" language="javascript" type="application/x-javascript"></script>
+<script src="js/fetch.js" language="javascript" type="application/x-javascript"></script>
+<script src="js/datamodel.js" language="javascript" type="application/x-javascript"></script>
+<script src="js/ui.js" language="javascript" type="application/x-javascript"></script>
+<script src="js/settings.js" language="javascript" type="application/x-javascript"></script>
+<script src="js/titanium.js" language="javascript" type="application/x-javascript"></script>
+
+
+
+</head>
+
+
+<body>
+
+
+	<div id="header" style="height:2em;">
+		<span id="reload" style="float:right;">
+			<a href="javascript:v1river.fetcher.cleanUpdate();" class="" style="background-color:#fff;">
+			<span class="ui-icon-refresh ui-icon ui-state-highlight toolbar-mini-button"></span></a> 
+	   		<span id="updated" style="color:#fff;"></span>
+    		<span id="loading" style="display:none;"><blink>...</blink></span>  
+	</div>
+   
+
+
+<div id="tabs" style="font-size:.7em;width:99%;height:3em;">
+	<ul>
+		<li><a href="#tabs-1" id="t1">River of Changes</a></li>
+		<li><a href="#tabs-2" id="t2">My River</a></li>
+		<!--- <li><a href="#tabs-3" id="t4">Viz</a></li> --->
+		<li><a href="#tabs-4" id="t3">Settings</a></li>
+	</ul>
+
+
+<div id="tabs-1" date:where="" data:moment="0">
+<div id="content" style="float:clear"></div>
+</div>
+<div id="tabs-2" data:where="Owners.IsSelf='TRUE'|ChangedBy.IsSelf='TRUE'" data:moment="0"> <div id="mycontent" style="float:clear"></div></div>
+<div id="tabs-3"></div>
+<div id="tabs-4">
+<div id="config" style="display:;">
+	<fieldset><legend> VersionOne Instance Settings</legend>
+  <table>
+	  <tr><td>UserName</td></tr><tr><td><input type="username" id="username" value="" /></td></tr>
+	  <tr><td>Password</td></tr><tr><td><input type="password" id="password" value="" /></td></tr>
+	  <tr><td>Instance URL<td></tr><tr><td><input type="text" name="instanceURL" value="" id="baseUrl" size="40"/><br/>
+	  <small> ex: https://www3.v1host.com/mycompany/</small></td></tr>
+	  
+	  <tr><td><input type="submit" value="Save" onclick="v1river.settings.savePrefsFromUI();"/></td></tr></table>
+	  </fieldset>
+	</div>
+  <br/>
+  <fieldset><legend>Preferences</legend>
+  <div> <input type="checkbox" id="prefs_notify" checked /> Notify me of new changes with OS "toasts" and activity stream window is not in focus</div>
+<br />
+<div> 
+<table id="projectMenu"><tr><td>
+	<ul class="sf-menu" >
+        <li class="current">
+            <a href="#a">Project</a>
+                <ul id="projects-menu">
+                    <li id="projects-all"><a href="#">All</a></li>
+                </ul>
+        </li>
+	</ul>
+</td><td id="projectName">
+</td></tr></table>
+<!--
+Include Changes on:<br />
+
+<input id="assetStory" type="checkbox" name="workitem" value="Story" /> <label for="assetStory">Story</label><br />
+<input id="assetTask" type="checkbox" name="task" value="Task" /> <label for="assetTask">Task</label><br />
+<input id="assetTest" type="checkbox" name="test" value="Test" /> <label for="assetTest">Test</label><br />
+<input id="assetNote" type="checkbox" name="note" value="Task" /> <label for="assetNote">Note</label><br />
+<input id="assetAttachment" type="checkbox" name="attachment" value="Test" /> <label for="assetAttachment">Attachment</label><br />
+-->
+
+</fieldset>
+	
+</div>
+</div>
+
+</body>
+</html>
